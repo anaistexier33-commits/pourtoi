@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>🌗 Pour toi</title>
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 30px;
+      line-height: 1.8;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .poem {
+      white-space: pre-line;
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🌗</h1>
+
+  <!-- POÈME -->
+  <div class="poem">
+À toi,
+celui que j’appelle Musso,
+
+On dit que les opposés s’attirent,
+nous on a carrément choisi de s’affronter
+et pourtant, 
+depuis juillet,
+c’est fou comme tu me deviens familier.
+
+Tu es cet homme qui joue au dur,
+qui parle fort,
+qui tranche,
+mais qui écoute vraiment.
+Celui qui observe tout,
+qui comprend vite,
+elui qui ne juge pas 
+ou alors juste assez pour me faire rire
+
+Tu m’apprends
+à sortir de mes idées toutes faites,
+à regarder autrement,
+à dire “ok, pourquoi pas”,
+à vivre un peu plus dans l’élan
+que dans la théorie 
+
+On est Musso et Stal 
+Deux enfants 
+deux extrêmes qui s’emboîtent bizarrement bien,
+deux chemins qui s’apprennent,
+deux libertés qui se croisent
+sans jamais s’étouffer. 
+
+Et même si la vie continue comme elle veut,
+j’aime ce qu’on est,
+là, maintenant,
+au milieu de tout le reste.
+
+J’aime ta façon de vivre vite,
+de rire fort,
+de parler vrai, 
+D’embrasser ma folie, mes bêtises 
+ta manière de gérer les choses sans faire semblant 
+et d’être, derrière tout ça,
+un homme au cœur beaucoup plus tendre
+que tu ne le laisses paraître 
+
+Alors joyeux anniversaire, mon Musso
+Promis, je continuerai 
+À te reprendre quand je te juge border  
+À jouer ensemble et rire aux éclats 
+à t’instruire la culture gen z, mon boomer
+À être perchée 
+Et j’espère
+qu’on aura encore
+plein de débats,
+plein de “viens, on fait quoi maintenant ?”,
+Plein de musiques à se partager 
+Pleins de bêtises à inaugurer 
+plein de choses à découvrir
+l’un de l’autre
+
+— Stal
+celle qui t’instruit,
+qui t’apprécie,
+bien plus que prévu
+  </div>
+
+  <!-- PLAYER AUDIO INVISIBLE -->
+  <audio id="player" autoplay></audio>
+
+  <script>
+    // LISTE EXACTE DE TES MP3 (doivent être dans le même dossier que ce fichier)
+    const playlist = [
+      "3005 - Childish Gambino.mp3",
+      "A Forest - The Cure.mp3",
+      "Angel – Massive Attack.mp3",
+      "Au fond d’ma tête.mp3",
+      "BEHELIT.Berserk.mp3",
+      "Blade Runner Blues.mp3",
+      "Bombe.Yoa.mp3",
+      "Cigarettes After Sex - Nothings Gonna Hurt You Baby.mp3",
+      "Cowboy - Selena Gomez.mp3",
+      "Damso - 911 (Paroles).mp3",
+      "Diamant.Georgio&Yoa.mp3",
+      "Dinos - Helsinki (Audio).mp3",
+      "Dissolved Girl - Massive Attack.mp3",
+      "Dune_Part Two Soundtrack – Hans Zimmer.mp3",
+      "Evenstar.mp3",
+      "Eyes Without a Face.mp3",
+      "Favourite - Fontaine.DC.mp3",
+      "Fontaines D.C. - Roman Holiday.mp3",
+      "Fontaines D.C. – Starburster.mp3",
+      "Forever - Gesaffelstein.mp3",
+      "Gats.Berserk.mp3",
+      "Hamza - Validé (Clip officiel).mp3",
+      "I Wanna Be Yours.mp3",
+      "Ils me rient tous au nez (Live).mp3",
+      "introdução.Aupinard.mp3",
+      "Jazzy Bazz - Gizeh.mp3",
+      "Jorja Smith - The One.mp3",
+      "K. - Cigarettes After Sex.mp3",
+      "Keep On Loving You – Cigarettes After Sex.mp3",
+      "Kill Bill – The Lonely Shepherd.mp3",
+      "LA BIEN QUERIDA – Dinamita.mp3",
+      "Les.mp3",
+      "M83 – I Need You (Audio).mp3",
+      "Mareux – The Perfect Girl.mp3",
+      "Mazzy Star - Fade Into You.mp3",
+      "Mesa.Han.Zimmer.BladeRunner.mp3",
+      "Miki - cartoon sex #3.mp3",
+      "miki - particule.mp3",
+      "Motherlode - Miki.mp3",
+      "MOURIR DEMAIN.Pivi.mp3",
+      "Muddy Monk - Splash.mp3",
+      "Noir meilleur.mp3",
+      "Oboy - Avec Toi.mp3",
+      "Patrick Watson – Je te laisserai des mots.mp3",
+      "Royal & The Serpent – Wasteland.mp3",
+      "Sade – Pearls.mp3",
+      "Selena Gomez - Souvenir.mp3",
+      "Selena Gomez, benny blanco – How Does It Feel.mp3",
+      "Somewhere Only We Know (Remastered 2024).mp3",
+      "Strangers Things 2 – The Return.mp3",
+      "SZA – Kitchen.mp3",
+      "The Korgis – Everybody Got To Learn Sometime.mp3",
+      "The Weeknd – The Abyss.mp3",
+      "The Weeknd – The Morning.mp3",
+      "Wait.mp3"
+    ];
+
+    let index = 0;
+    const player = document.getElementById("player");
+
+    // Charge le premier morceau
+    player.src = playlist[index];
+
+    // Quand le morceau se termine → jouer le suivant
+    player.addEventListener("ended", function() {
+      index = (index + 1) % playlist.length; 
+      player.src = playlist[index];
+      player.play();
+    });
+  </script>
+
+</body>
+</html>
+
