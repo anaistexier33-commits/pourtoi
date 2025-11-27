@@ -12,33 +12,36 @@
       padding: 30px;
       line-height: 1.8;
     }
+
     h1 {
       text-align: center;
-      margin-bottom: 30px;
-    }
-    .poem {
-      white-space: pre-line;
-      max-width: 750px;
-      margin: 0 auto;
-      font-size: 1.1rem;
+      margin-bottom: 10px;
     }
 
+    /* Sous-titre discret sous le h1 */
     .subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  opacity: 0.6;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
+      text-align: center;
+      font-size: 0.85rem;   /* plus petit */
+      font-style: italic;   /* italique */
+      opacity: 0.7;         /* un peu transparent = subtil */
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    /* Mise en forme du poème */
+    .poem {
+      white-space: pre-line;   /* respecte les retours à la ligne */
+      max-width: 750px;
+      margin: 0 auto 40px auto;
+      font-size: 1.05rem;
+    }
   </style>
 </head>
 
 <body>
 
   <h1>🌗</h1>
-  <p class="subtitle">Quand deux mondes se rencontrent</p>
+  <p class="subtitle">Deux mondes se rencontrent</p>
 
   <!-- POÈME -->
   <div class="poem">
@@ -57,7 +60,7 @@ qui tranche,
 mais qui écoute vraiment.
 Celui qui observe tout,
 qui comprend vite,
-elui qui ne juge pas 
+celui qui ne juge pas 
 ou alors juste assez pour me faire rire
 
 Tu m’apprends
@@ -109,13 +112,20 @@ qui t’apprécie,
 bien plus que prévu
 
 Dis bien merci ou je t'envoie aux Goulags 
-    
   </div>
 
   <audio id="player" autoplay></audio>
 
- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0"
+    width="100%"
+    height="352"
+    frameborder="0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
 
 </body>
 </html>
