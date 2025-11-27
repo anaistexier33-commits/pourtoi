@@ -99,81 +99,8 @@ bien plus que prévu
 Dis bien merci ou je t'envoie aux Goulags
   </div>
 
-  <!-- PLAYER AUDIO INVISIBLE -->
-  <audio id="player" autoplay></audio>
-
-  <script>
-    // LISTE EXACTE DE TES MP3 (doivent être dans le même dossier que ce fichier)
-    const playlist = [
-      "3005 - Childish Gambino.mp3",
-      "A Forest - The Cure.mp3",
-      "Angel – Massive Attack.mp3",
-      "Au fond d’ma tête.mp3",
-      "BEHELIT.Berserk.mp3",
-      "Blade Runner Blues.mp3",
-      "Bombe.Yoa.mp3",
-      "Cigarettes After Sex - Nothings Gonna Hurt You Baby.mp3",
-      "Cowboy - Selena Gomez.mp3",
-      "Damso - 911 (Paroles).mp3",
-      "Diamant.Georgio&Yoa.mp3",
-      "Dinos - Helsinki (Audio).mp3",
-      "Dissolved Girl - Massive Attack.mp3",
-      "Dune_Part Two Soundtrack – Hans Zimmer.mp3",
-      "Evenstar.mp3",
-      "Eyes Without a Face.mp3",
-      "Favourite - Fontaine.DC.mp3",
-      "Fontaines D.C. - Roman Holiday.mp3",
-      "Fontaines D.C. – Starburster.mp3",
-      "Forever - Gesaffelstein.mp3",
-      "Gats.Berserk.mp3",
-      "Hamza - Validé (Clip officiel).mp3",
-      "I Wanna Be Yours.mp3",
-      "Ils me rient tous au nez (Live).mp3",
-      "introdução.Aupinard.mp3",
-      "Jazzy Bazz - Gizeh.mp3",
-      "Jorja Smith - The One.mp3",
-      "K. - Cigarettes After Sex.mp3",
-      "Keep On Loving You – Cigarettes After Sex.mp3",
-      "Kill Bill – The Lonely Shepherd.mp3",
-      "LA BIEN QUERIDA – Dinamita.mp3",
-      "Les.mp3",
-      "M83 – I Need You (Audio).mp3",
-      "Mareux – The Perfect Girl.mp3",
-      "Mazzy Star - Fade Into You.mp3",
-      "Mesa.Han.Zimmer.BladeRunner.mp3",
-      "Miki - cartoon sex #3.mp3",
-      "miki - particule.mp3",
-      "Motherlode - Miki.mp3",
-      "MOURIR DEMAIN.Pivi.mp3",
-      "Muddy Monk - Splash.mp3",
-      "Noir meilleur.mp3",
-      "Oboy - Avec Toi.mp3",
-      "Patrick Watson – Je te laisserai des mots.mp3",
-      "Royal & The Serpent – Wasteland.mp3",
-      "Sade – Pearls.mp3",
-      "Selena Gomez - Souvenir.mp3",
-      "Selena Gomez, benny blanco – How Does It Feel.mp3",
-      "Somewhere Only We Know (Remastered 2024).mp3",
-      "Strangers Things 2 – The Return.mp3",
-      "SZA – Kitchen.mp3",
-      "The Korgis – Everybody Got To Learn Sometime.mp3",
-      "The Weeknd – The Abyss.mp3",
-      "The Weeknd – The Morning.mp3",
-      "Wait.mp3"
-    ];
-
-    let index = 0;
-    const player = document.getElementById("player");
-
-    // Charge le premier morceau
-    player.src = playlist[index];
-
-    // Quand le morceau se termine → jouer le suivant
-    player.addEventListener("ended", function() {
-      index = (index + 1) % playlist.length; 
-      player.src = playlist[index];
-      player.play();
-    });
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  
   </script>
 
 </body>
