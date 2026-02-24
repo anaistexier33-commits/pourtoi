@@ -3,30 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>🌗 Pour toi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
     body {
       background-color: #000;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      padding: 20px 16px;
+      padding: 30px;
       line-height: 1.8;
-      margin: 0;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 6px;
-      font-size: 2rem;
     }
 
     .titre-eclipse {
       text-align: center;
-      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-size: 2rem;
       font-weight: bold;
       letter-spacing: 0.1em;
       margin: 0 0 6px 0;
@@ -34,7 +27,7 @@
 
     .sous-titre {
       text-align: center;
-      font-size: clamp(0.85rem, 3vw, 1rem);
+      font-size: 1rem;
       font-style: italic;
       color: #aaa;
       margin: 0 0 40px 0;
@@ -42,7 +35,6 @@
 
     .poem-wrapper {
       max-width: 750px;
-      width: 100%;
       margin: 0 auto;
       position: relative;
       cursor: pointer;
@@ -50,7 +42,7 @@
 
     .poem {
       white-space: pre-line;
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-size: 1.1rem;
       line-height: 1.8;
     }
 
@@ -62,6 +54,7 @@
       display: none;
       background-color: #000;
       color: #fff;
+      padding: 30px;
     }
 
     .poem-wrapper:hover .poem-original {
@@ -72,17 +65,9 @@
       display: block;
     }
 
-    .poem-wrapper.active .poem-original {
-      display: none;
-    }
-
-    .poem-wrapper.active .poem-hidden {
-      display: block;
-    }
-
     .hover-hint {
       text-align: center;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: #555;
       margin-bottom: 12px;
       letter-spacing: 0.05em;
@@ -90,23 +75,7 @@
 
     .player {
       max-width: 750px;
-      width: 100%;
       margin: 50px auto 0 auto;
-    }
-
-    .player iframe {
-      width: 100%;
-      height: 352px;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 16px 14px;
-      }
-
-      .player iframe {
-        height: 200px;
-      }
     }
   </style>
 </head>
@@ -116,9 +85,9 @@
   <p class="titre-eclipse">Éclipse</p>
   <p class="sous-titre">deux mondes se rencontrent</p>
 
-  <p class="hover-hint">( passe la souris · ou appuie · pour lire la suite )</p>
+  <p class="hover-hint">( passe la souris pour lire la suite )</p>
 
-  <div class="poem-wrapper" id="poemWrapper">
+  <div class="poem-wrapper">
 
     <div class="poem poem-original">
 À toi,
@@ -128,6 +97,7 @@ nous on a carrément choisi de s'affronter
 et pourtant, 
 depuis juillet,
 c'est fou comme tu me deviens familier.
+      
 Tu es cet homme qui joue au dur,
 qui parle fort,
 qui tranche,
@@ -136,22 +106,26 @@ Celui qui observe tout,
 qui comprend vite,
 celui qui ne juge pas 
 ou alors juste assez pour me faire rire
+      
 Tu m'apprends
 à sortir de mes idées toutes faites,
 à regarder autrement,
 à dire "ok, pourquoi pas",
 à vivre un peu plus dans l'élan
-que dans la théorie 
+que dans la théorie
+      
 On est Musso et Stal 
 deux enfants 
 deux extrêmes qui s'emboîtent bizarrement bien,
 deux chemins qui s'apprennent,
 deux libertés qui se croisent
 sans jamais s'étouffer. 
+      
 Et même si la vie continue comme elle veut,
 j'aime ce qu'on est,
 là, maintenant,
 au milieu de tout le reste.
+      
 J'aime ta façon de vivre vite,
 de rire fort,
 de parler vrai, 
@@ -160,6 +134,7 @@ ta manière de gérer les choses sans faire semblant
 et d'être, derrière tout ça,
 un homme au cœur beaucoup plus tendre
 que tu ne le laisses paraître 
+      
 Alors joyeux anniversaire, Musso
 Promis, je continuerai 
 À te reprendre quand je te juge border  
@@ -174,56 +149,62 @@ Plein de musiques à se partager
 Pleins de bêtises à inaugurer 
 plein de choses à découvrir
 l'un de l'autre
+      
 — Stal
 celle qui t'apprécie,
 bien plus que prévu 
+      
 Dis bien merci ou je t'envoie aux Goulags
+      
     </div>
 
     <div class="poem poem-hidden">
-J'ai manqué d'honnêteté avec toi, avec moi-même
+J'ai manqué d'honnêteté avec toi, avec moi,
 Peut-être que je voulais plus
 Être plus à tes yeux et dans ta vie
-Dès le début je me persuadais que non
+Dès le début je me répétais que non
 Et pourtant ta personnalité, la manière dont tu étais aux soins avec moi
 nos délires, notre complicité, tous ces moments passés ensemble
-m'ont fait plonger
-Oui je suis plus qu'attachée, c'est évident
+m'ont fait plonger sans que je le décide vraiment 
+Je suis plus qu'attachée, c'est évident
 
-Mais je sais depuis le début, notre première rencontre
-que tu n'es pas la personne façonnée pour moi dans ce monde
+Pourtant je savais depuis notre première rencontre,
+que tu n'es pas la personne façonnée pour moi dans ce monde,
 que je ne pouvais être heureuse avec toi
 pour plein de raisons et malgré tout j'ai plongé
-J'ai plongé car les choses se sont accélérées,
-on était plus que des partenaires de jeux
-on était comme un couple
-tu étais mon tout à un moment de ma vie plein de doutes
-Tu représentais un de mes piliers en plus de ma famille, mes amis
+      
+Parce que les choses se sont accélérées,
+parce qu'on a dépassé les partenaires de jeux,
+parce qu'on ressemblait à quelque chose,
+à un couple, presque, à un refuge, sûrement
+Tu étais mon pilier à côté de ma famille, mes amis
+dans une période où tout vacillait en moi.
 
-C'est dur d'admettre le fait je ne suis pas celle pour toi dans cette vie
-d'accepter que tu vivras peut-être ce que tu as toujours voulu avec une autre
-D'admettre d'être « remplacée »
-de ne plus être celle qui a la premiere place dans ton cœur
+C'est dur d'admettre que je ne suis pas celle pour toi dans cette vie,
+D'accepter que tu vivras peut-être avec une autre, ce que tu as toujours voulu
+De ne plus avoir la première place
+D'être « remplacée » 
 
 Si j'allais voir ailleurs c'était par curiosité toujours
 mais surtout parce que je n'étais pas en adéquation avec mon esprit, mes envies
 celle d'aimer et d'être aimé en retour
 
-Et car de l'autre côté j'avais toi
-et toi me paraissait impossible dans cette configuration là
+Et car de l'autre côté il y avait toi
+et toi me semblait impossible dans cette configuration là
 Je ne ne t'ai jamais dis les choses aussi
 car tu le sais nous avons des valeurs opposées
 Que j'avais simplement peur de te perdre
-C'était trop d'insécurité pour me projeter dans du sérieux ensemble
-alors je me suis conditionnée
+C'était trop d'insécurité pour me projeter 
+Alors je me suis conditionnée à ne pas vouloir 
 
 J'écoutais cette part de moi depuis ma dernière vraie relation
-Celle qui veut voir, découvrir de nouvelles choses s'amuser
-Cette part que j'embrasse profondément
+Celle qui veut voir, découvrir de nouvelles choses, rester libre 
+Cette part que j'embrasse entièrement 
 Je n'ai aucun regret d'avoir vécu toutes ces expériences
 et notamment avec toi
 
-Ces dernières semaines je ne voyais plus personne car je ne désirait plus
+Ces dernières semaines, pourtant,
+je ne désirait plus personne, 
 C'était seulement toi
 Mon corps était plus amoureux que ma tête
 et la contradiction ne mène nul part
@@ -252,8 +233,8 @@ pour mieux les laisser réemprunter chacune,
 leur trajectoire naturelle
 
 Merci
-J'étais à un carrefour de ma vie tu en a fais partie
-et aujourd'hui j'avance vers le meilleur
+J'étais à un carrefour de ma vie, tu en a fais partie,
+et aujourd'hui, j'avance vers le meilleur
 
 Stal
     </div>
@@ -261,16 +242,8 @@ Stal
   </div>
 
   <div class="player">
-   <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/14609423401" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
-
-  <script>
-    const wrapper = document.getElementById('poemWrapper');
-    wrapper.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-      this.classList.toggle('active');
-    }, { passive: false });
-  </script>
 
 </body>
 </html>
