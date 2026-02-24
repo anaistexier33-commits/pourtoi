@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>🌗 Pour toi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #000;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      padding: 30px;
+      padding: 20px 16px;
       line-height: 1.8;
+      margin: 0;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 6px;
+      font-size: 2rem;
     }
 
     .titre-eclipse {
       text-align: center;
-      font-size: 2rem;
+      font-size: clamp(1.4rem, 5vw, 2rem);
       font-weight: bold;
       letter-spacing: 0.1em;
       margin: 0 0 6px 0;
@@ -27,7 +34,7 @@
 
     .sous-titre {
       text-align: center;
-      font-size: 1rem;
+      font-size: clamp(0.85rem, 3vw, 1rem);
       font-style: italic;
       color: #aaa;
       margin: 0 0 40px 0;
@@ -35,6 +42,7 @@
 
     .poem-wrapper {
       max-width: 750px;
+      width: 100%;
       margin: 0 auto;
       position: relative;
       cursor: pointer;
@@ -42,7 +50,7 @@
 
     .poem {
       white-space: pre-line;
-      font-size: 1.1rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
       line-height: 1.8;
     }
 
@@ -54,7 +62,6 @@
       display: none;
       background-color: #000;
       color: #fff;
-      padding: 30px;
     }
 
     .poem-wrapper:hover .poem-original {
@@ -65,9 +72,17 @@
       display: block;
     }
 
+    .poem-wrapper.active .poem-original {
+      display: none;
+    }
+
+    .poem-wrapper.active .poem-hidden {
+      display: block;
+    }
+
     .hover-hint {
       text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #555;
       margin-bottom: 12px;
       letter-spacing: 0.05em;
@@ -75,7 +90,23 @@
 
     .player {
       max-width: 750px;
+      width: 100%;
       margin: 50px auto 0 auto;
+    }
+
+    .player iframe {
+      width: 100%;
+      height: 352px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 14px;
+      }
+
+      .player iframe {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -85,9 +116,9 @@
   <p class="titre-eclipse">Éclipse</p>
   <p class="sous-titre">deux mondes se rencontrent</p>
 
-  <p class="hover-hint">( passe la souris pour lire la suite )</p>
+  <p class="hover-hint">( passe la souris · ou appuie · pour lire la suite )</p>
 
-  <div class="poem-wrapper">
+  <div class="poem-wrapper" id="poemWrapper">
 
     <div class="poem poem-original">
 À toi,
@@ -221,8 +252,8 @@ pour mieux les laisser réemprunter chacune,
 leur trajectoire naturelle
 
 Merci
-J'étais à un carrefour de ma vie, tu en a fais partie,
-et aujourd'hui, j'avance vers le meilleur
+J'étais à un carrefour de ma vie tu en a fais partie
+et aujourd'hui j'avance vers le meilleur
 
 Stal
     </div>
@@ -232,6 +263,14 @@ Stal
   <div class="player">
     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
+
+  <script>
+    const wrapper = document.getElementById('poemWrapper');
+    wrapper.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      this.classList.toggle('active');
+    }, { passive: false });
+  </script>
 
 </body>
 </html>
