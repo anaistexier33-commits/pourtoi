@@ -2,8 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Eclipse 🌗</title>
-
+  <title>🌗 Pour toi</title>
   <style>
     body {
       background-color: #000;
@@ -15,45 +14,89 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    /* Sous-titre discret sous le h1 */
-    .subtitle {
+    .titre-eclipse {
       text-align: center;
-      font-size: 0.85rem;   /* plus petit */
-      font-style: italic;   /* italique */
-      opacity: 0.7;         /* un peu transparent = subtil */
-      margin-top: 0;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin: 0 0 6px 0;
     }
 
-    /* Mise en forme du poème */
-    .poem {
-      white-space: pre-line;   /* respecte les retours à la ligne */
+    .sous-titre {
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+      color: #aaa;
+      margin: 0 0 40px 0;
+    }
+
+    .poem-wrapper {
       max-width: 750px;
-      margin: 0 auto 40px auto;
-      font-size: 1.05rem;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .poem {
+      white-space: pre-line;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .poem-original {
+      display: block;
+    }
+
+    .poem-hidden {
+      display: none;
+      background-color: #000;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .poem-wrapper:hover .poem-original {
+      display: none;
+    }
+
+    .poem-wrapper:hover .poem-hidden {
+      display: block;
+    }
+
+    .hover-hint {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #555;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .player {
+      max-width: 750px;
+      margin: 50px auto 0 auto;
     }
   </style>
 </head>
-
 <body>
 
   <h1>🌗</h1>
-  <p class="subtitle">Deux mondes se rencontrent</p>
+  <p class="titre-eclipse">Éclipse</p>
+  <p class="sous-titre">deux mondes se rencontrent</p>
 
-  <!-- POÈME -->
-  <div class="poem">
+  <p class="hover-hint">( passe la souris pour lire la suite )</p>
+
+  <div class="poem-wrapper">
+
+    <div class="poem poem-original">
 À toi,
-celui que j’appelle Musso,
-
-On dit que les opposés s’attirent,
-nous on a carrément choisi de s’affronter
+celui que j'appelle Musso,
+On dit que les opposés s'attirent,
+nous on a carrément choisi de s'affronter
 et pourtant, 
 depuis juillet,
-c’est fou comme tu me deviens familier.
-
+c'est fou comme tu me deviens familier.
 Tu es cet homme qui joue au dur,
 qui parle fort,
 qui tranche,
@@ -62,61 +105,133 @@ Celui qui observe tout,
 qui comprend vite,
 celui qui ne juge pas 
 ou alors juste assez pour me faire rire
-
-Tu m’apprends
+Tu m'apprends
 à sortir de mes idées toutes faites,
 à regarder autrement,
-à dire “ok, pourquoi pas”,
-à vivre un peu plus dans l’élan
+à dire "ok, pourquoi pas",
+à vivre un peu plus dans l'élan
 que dans la théorie 
-
 On est Musso et Stal 
-deux enfants, 
-deux extrêmes qui s’emboîtent bizarrement bien,
-deux chemins qui s’apprennent,
+deux enfants 
+deux extrêmes qui s'emboîtent bizarrement bien,
+deux chemins qui s'apprennent,
 deux libertés qui se croisent
-sans jamais s’étouffer. 
-
+sans jamais s'étouffer. 
 Et même si la vie continue comme elle veut,
-j’aime ce qu’on est,
+j'aime ce qu'on est,
 là, maintenant,
 au milieu de tout le reste.
-
-J’aime ta façon de vivre vite,
+J'aime ta façon de vivre vite,
 de rire fort,
 de parler vrai, 
-d’embrasser ma folie,
+D'embrasser ma folie, 
 ta manière de gérer les choses sans faire semblant 
-et d’être, derrière tout ça,
+et d'être, derrière tout ça,
 un homme au cœur beaucoup plus tendre
 que tu ne le laisses paraître 
-
-Alors joyeux anniversaire, mon Musso
+Alors joyeux anniversaire, Musso
 Promis, je continuerai 
 À te reprendre quand je te juge border  
 À jouer ensemble et rire aux éclats 
-à t’instruire la culture gen z, mon boomer
+à t'instruire la culture gen z, mon boomer
 À être perchée 
-Et j’espère
-qu’on aura encore
+Et j'espère
+qu'on aura encore
 plein de débats,
-plein de “viens, on fait quoi maintenant ?”,
-Plein de musiques à se partager
+plein de "viens, on fait quoi maintenant ?",
+Plein de musiques à se partager 
 Pleins de bêtises à inaugurer 
 plein de choses à découvrir
-l’un de l’autre
-
+l'un de l'autre
 — Stal
-celle qui t’apprécie,
-bien plus que prévu
+celle qui t'apprécie,
+bien plus que prévu 
+Dis bien merci ou je t'envoie aux Goulags
+    </div>
 
-Dis bien merci ou je t'envoie aux Goulags 
+    <div class="poem poem-hidden">
+J'ai manqué d'honnêteté avec toi, avec moi-même
+Peut-être que je voulais plus
+Être plus à tes yeux et dans ta vie
+Dès le début je me persuadais que non
+Et pourtant ta personnalité, la manière dont tu étais aux soins avec moi
+nos délires, notre complicité, tous ces moments passés ensemble
+m'ont fait plonger
+Oui je suis plus qu'attachée, c'est évident
+
+Mais je sais depuis le début, notre première rencontre
+que tu n'es pas la personne façonnée pour moi dans ce monde
+que je ne pouvais être heureuse avec toi
+pour plein de raisons et malgré tout j'ai plongé
+J'ai plongé car les choses se sont accélérées,
+on était plus que des partenaires de jeux
+on était comme un couple
+tu étais mon tout à un moment de ma vie plein de doutes
+Tu représentais un de mes piliers en plus de ma famille, mes amis
+
+C'est dur d'admettre le fait je ne suis pas celle pour toi dans cette vie
+d'accepter que tu vivras peut-être ce que tu as toujours voulu avec une autre
+D'admettre d'être « remplacée »
+de ne plus être celle qui a la premiere place dans ton cœur
+
+Si j'allais voir ailleurs c'était par curiosité toujours
+mais surtout parce que je n'étais pas en adéquation avec mon esprit, mes envies
+celle d'aimer et d'être aimé en retour
+
+Et car de l'autre côté j'avais toi
+et toi me paraissait impossible dans cette configuration là
+Je ne ne t'ai jamais dis les choses aussi
+car tu le sais nous avons des valeurs opposées
+Que j'avais simplement peur de te perdre
+C'était trop d'insécurité pour me projeter dans du sérieux ensemble
+alors je me suis conditionnée
+
+J'écoutais cette part de moi depuis ma dernière vraie relation
+Celle qui veut voir, découvrir de nouvelles choses s'amuser
+Cette part que j'embrasse profondément
+Je n'ai aucun regret d'avoir vécu toutes ces expériences
+et notamment avec toi
+
+Ces dernières semaines je ne voyais plus personne car je ne désirait plus
+C'était seulement toi
+Mon corps était plus amoureux que ma tête
+et la contradiction ne mène nul part
+
+Je pense que le mieux est de couper les ponts pour le moment
+prendre des nouvelles quand l'envie nous vient
+pourquoi pas être de vrais amis dans un futur
+Car tu comptes vraiment
+Je te souhaite le meilleur, toujours
+
+En ce début d'année 2026 tu m'avais fait part de tes doutes, tes démons,
+ceux qui restent agrippés tard le soir dans le lit
+Sans que je m'admette, par symétrie,
+que, moi aussi j'en avais
+
+Ces mots que je t'écris c'est bien plus que ça
+c'est une lettre à moi même
+Je me rend compte de beaucoup de choses que j'ai laissé de côté ces derniers temps :
+mes envies, mes objectifs de vie, mes passions,
+apprendre toujours, m'émerveiller, m'affirmer
+
+Une éclipse, comme son nom l'indique,
+n'est pas faite pour durer,
+le temps d'un instant, elle consume deux entités diamétralement opposées, les fusionne,
+pour mieux les laisser réemprunter chacune,
+leur trajectoire naturelle
+
+Merci
+J'étais à un carrefour de ma vie, tu en a fais partie,
+et aujourd'hui, j'avance vers le meilleur
+
+Stal
+    </div>
+
   </div>
 
-  <audio id="player" autoplay></audio>
-
- <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/14609423401" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-  
+  <div class="player">
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2364vGDUcWDVxnIxsEHpCa?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
 
 </body>
 </html>
